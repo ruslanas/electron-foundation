@@ -9,6 +9,7 @@ Install
 Some combination of steps below
 
 ```
+npm install -g typescript
 npm install -g electron
 npm install -g autoprefixer
 npm install -g webpack
@@ -16,7 +17,7 @@ npm install -g node-sass
 ```
 
 ```
-npm link webpack
+npm link typescript
 npm iink node-sass
 ```
 
@@ -27,4 +28,7 @@ Build
 
 `webpack`
 
+Run
+===
 
+`electron .`
