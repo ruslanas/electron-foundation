@@ -1,3 +1,15 @@
+@import 'reset';
 body {
+    font-family: sans-serif;
     user-select: none;
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+    td,
+    th {
+        border: 1px solid;
+    }
 }

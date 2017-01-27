@@ -1,16 +1,29 @@
-require('../styles/main.scss');
+import '../styles/main.scss';
 
-require('angular');
-require('angular-route');
+import 'angular';
+import 'angular-route';
 
-import { HomeController } from "./controllers/HomeController";
+import { AboutController } from "./controllers/AboutController";
 
-angular.module('electron.foundation', ['ngRoute'])
-    .controller('HomeController', ["$log", HomeController])
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/', {
-            template: `<h1 ng-bind="app.title"></h1>`,
-            controller: 'HomeController',
-            controllerAs: 'app'
-        });
-    }]);
+export default angular.module('electron.foundation', ['ngRoute'])
+
+    .controller('AboutController', ["$log", AboutController])
+
+    .config(['$routeProvider', '$compileProvider', '$logProvider',
+        function (
+            $routeProvider,
+            $compileProvider: ng.ICompileProvider,
+            $logProvider: ng.ILogProvider
+        ) {
+            $logProvider.debugEnabled(true);
+            $compileProvider.debugInfoEnabled(false);
+
+            (<any>$compileProvider).commentDirectivesEnabled(false);
+            (<any>$compileProvider).cssClassDirectivesEnabled(false);
+
+            $routeProvider.when('/', {
+                templateUrl: 'templates/about.html',
+                controller: 'AboutController',
+                controllerAs: 'app'
+            });
+        }]);
