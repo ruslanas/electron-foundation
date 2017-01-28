@@ -1,6 +1,12 @@
-const electron = require('electron');
-const { app } = electron;
-const { BrowserWindow } = electron;
+"use strict";
+
+if(!process.versions.electron) {
+    console.error("This is Electron application");
+    process.exit();
+}
+
+const app = require('electron').app;
+const BrowserWindow = require('electron').BrowserWindow;
 
 function createWindow(file, options) {
 
