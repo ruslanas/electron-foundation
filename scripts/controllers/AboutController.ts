@@ -6,15 +6,16 @@ export class AboutController {
     private version: string = null;
     private locale: string = null;
     private path: string = null;
+    private app: Electron.App = null;
 
     constructor(
         private $log: ng.ILogService
     ) {
-        let app = electron.remote.app;
-        this.name = app.getName();
-        this.path = app.getPath('temp');
-        this.version = app.getVersion();
-        this.locale = app.getLocale();
+        this.app = electron.remote.app;
+        this.name = this.app.getName();
+        this.path = this.app.getPath('temp');
+        this.version = this.app.getVersion();
+        this.locale = this.app.getLocale();
         this.$log.debug('AboutController initialized');
     }
 }

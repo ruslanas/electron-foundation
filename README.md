@@ -11,12 +11,14 @@ Install
 Build
 =====
 
-```
-npm install -g webpack
-webpack
-```
+`npm run dist`
 
 Run
 ===
 
 `npm start`
+
+Develop
+=======
+
+`npm run watch`
