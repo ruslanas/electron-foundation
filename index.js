@@ -1,6 +1,6 @@
 "use strict";
 
-if(!process.versions.electron) {
+if (!process.versions.electron) {
     console.error("This is Electron application");
     process.exit();
 }
@@ -14,7 +14,7 @@ function createWindow(file, options) {
 
     win.maximize();
     // win.openDevTools();
-    win.setMenuBarVisibility(true);
+    // win.setMenuBarVisibility(true);
     win.loadURL(`file://${__dirname}/${file}`);
 
 }

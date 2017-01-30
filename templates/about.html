@@ -19,5 +19,9 @@
             <td>Temp directory</td>
             <td ng-bind="app.path"></td>
         </tr>
+        <tr>
+            <td>User Data</td>
+            <td ng-bind="app.app.getPath('userData')"></td>
+        </tr>
     </tbody>
 </table>

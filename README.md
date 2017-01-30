@@ -6,19 +6,24 @@ Electron TypeScript AngularJS Webpack PostCSS application foundation
 Install
 =======
 
-`npm install`
+`yarn`
 
 Build
 =====
 
-`npm run dist`
+`yarn run dist`
 
 Run
 ===
 
-`npm start`
+`yarn start`
 
 Develop
 =======
 
-`npm run watch`
+`yarn run watch`
+
+Other
+=====
+
+App icon by [Hopstarter](http://www.iconarchive.com/artist/hopstarter.html)
