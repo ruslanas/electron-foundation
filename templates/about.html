@@ -1,27 +1,33 @@
-<table>
-    <caption ng-bind="app.name"></caption>
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Version</td>
-            <td ng-bind="app.version"></td>
-        </tr>
-        <tr>
-            <td>Locale</td>
-            <td ng-bind="app.locale"></td>
-        </tr>
-        <tr>
-            <td>Temp directory</td>
-            <td ng-bind="app.path"></td>
-        </tr>
-        <tr>
-            <td>User Data</td>
-            <td ng-bind="app.app.getPath('userData')"></td>
-        </tr>
-    </tbody>
-</table>
+<div class="container">
+    <table class="mt-4 table table-inverse table-striped table-bordered">
+        <caption ng-bind="app.name"></caption>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Version</td>
+                <td ng-bind="app.version"></td>
+            </tr>
+            <tr>
+                <td>Locale</td>
+                <td ng-bind="app.locale"></td>
+            </tr>
+            <tr>
+                <td>Temp directory</td>
+                <td ng-bind="app.path"></td>
+            </tr>
+            <tr>
+                <td>User Data</td>
+                <td ng-bind="app.app.getPath('userData')"></td>
+            </tr>
+            <tr>
+                <td>Documents</td>
+                <td ng-bind="app.app.getPath('documents')"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
