@@ -6,7 +6,7 @@ module.exports = {
         filename: 'dist/[name].js'
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+        extensions: ['.webpack.js', '.web.js', '.ts', '.js']
     },
     module: {
         loaders: [{
@@ -15,20 +15,20 @@ module.exports = {
             },
             {
                 test: /\.json$/,
-                loader: 'json'
+                loader: 'json-loader'
             },
             {
                 test: /\.scss$/,
                 loaders: [
-                    'style',
+                    'style-loader',
                     'css-loader?importLoaders=1',
                     'postcss-loader',
-                    'sass'
+                    'sass-loader'
                 ]
             },
             {
-                test: /\.(?:png|ttc|gif|jpg)$/,
-                loader: 'file?name=./dist/[path][name].[ext]'
+                test: /\.(?:png|ttf|woff|woff2|eot|svg|gif|jpg)$/,
+                loader: 'file-loader?name=./dist/[path][name].[ext]'
             }
         ]
     },
